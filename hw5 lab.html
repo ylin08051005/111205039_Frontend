@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    td.colspan {
+      text-align: center;
+    }
+
+    td.img-col {
+      vertical-align: top;
+    }
+
+    textarea {
+      width: 100%;
+      resize: vertical;
+    }
+
+    .center-text {
+      text-align: center;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    form input {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Requirement 1: Create a cell crossing three columns in the first row -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3" class="colspan center-text">About--111205039</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Requirement 2: Create three columns and three rows -->
+      <tr>
+        <td class="img-col" rowspan="3">
+          <img src="C:\Users\林沂萱\OneDrive\文件\picture.jpg" alt="Personal Photo" width="100">
+          <br>
+          <small>Personal Photo</small>
+        </td>
+        <!-- Input for Name and Gender merged into one cell -->
+        <td colspan="3">
+          Name: <input type="text" name="name"><br>
+          Gender: <input type="radio" name="gender" value="Male"> Male
+          <input type="radio" name="gender" value="Female"> Female
+          <input type="radio" name="gender" value="Other"> Other
+        </td>
+      </tr>
+      <tr>
+        <td>
+          County:
+          <!-- Dropdown list for County -->
+          <select>
+            <option value="Taipei">Taipei</option>
+            <option value="Tainan">Tainan</option>
+            <option value="Taichung">Taichung</option>
+            <option value="Taoyuan">Taoyuan</option>
+          </select>
+        </td>
+        <td>
+          Birthday: <input type="date" name="birthday">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          E-mail: <input type="text" name="E-mail">
+        </td>
+      </tr>
+      <tr>
+        <td>Hobby</td>
+        <td colspan="2">
+          <!-- Checkboxes for Hobby -->
+          <input type="checkbox" name="hobby" value="Swimming"> Swimming
+          <input type="checkbox" name="hobby" value="Volleyball"> Volleyball
+          <input type="checkbox" name="hobby" value="Movie"> Movie
+          <input type="checkbox" name="hobby" value="Game"> Game
+          <input type="checkbox" name="hobby" value="Sleep"> Sleep
+        </td>
+      </tr>
+      <tr>
+        <td>Skill</td>
+        <td colspan="2">
+          <!-- Checkboxes for Skill -->
+          <input type="checkbox" name="skill" value="Java"> Java
+          <input type="checkbox" name="skill" value="HTML"> HTML
+          <input type="checkbox" name="skill" value="Python"> Python
+          <input type="checkbox" name="skill" value="Microsoft Office"> Microsoft Office
+          <input type="checkbox" name="skill" value="Premiere"> Premiere
+        </td>
+      </tr>
+      <tr>
+        <td>Say something</td>
+        <td colspan="2">
+          <!-- Textarea for saying something -->
+          <textarea placeholder="Say something here."></textarea>
+        </td>
+      </tr>
+      <!-- Submit and Reset buttons in the last row -->
+      <tr>
+        <td colspan="3">
+          <input type="submit" value="提交">
+          <input type="reset" value="重設">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
